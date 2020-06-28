@@ -19,15 +19,9 @@
 
           </nz-page-header-extra>
           <nz-page-header-content>
-            <nz-descriptions nzSize="small" [nzColumn]="3">
+            <!-- <nz-descriptions nzSize="small" [nzColumn]="3">
               <nz-descriptions-item nzTitle="Created" [nzSpan]="1">Lili Qu</nz-descriptions-item>
-              <nz-descriptions-item nzTitle="Association" [nzSpan]="1"><a>421421</a></nz-descriptions-item>
-              <nz-descriptions-item nzTitle="Creation Time" [nzSpan]="1">2017-01-10</nz-descriptions-item>
-              <nz-descriptions-item nzTitle="Effective Time" [nzSpan]="1">2017-10-10</nz-descriptions-item>
-              <nz-descriptions-item nzTitle="Remarks" [nzSpan]="2">
-                Gonghu Road, Xihu District, Hangzhou, Zhejiang, China
-              </nz-descriptions-item>
-            </nz-descriptions>
+            </nz-descriptions> -->
           </nz-page-header-content>
         </nz-page-header>
       </div>
@@ -42,14 +36,14 @@
 
 
   </div>
-  <div  nz-row style="height: 100% !important; overflow: hidden;">
+  <div  nz-row style="height: 79% !important; overflow: hidden;">
 
 
     <div class="home-rout" nz-col nzXs="24" nzSm="24" nzMd="4" nzLg="4" nzXl="4">
 
 
     </div>
-    <div style="overflow: hidden;" nz-col class="home-rout" nzXs="24" nzSm="24" nzMd="16" nzLg="16" nzXl="16">
+    <div style="overflow-y: scroll; overflow-x: hidden;height: 100% !important; " nz-col class="home-rout" nzXs="24" nzSm="24" nzMd="16" nzLg="16" nzXl="16">
 
       <router-outlet></router-outlet>
 
@@ -58,10 +52,16 @@
 
     </div>
 
-
-
   </div>
 
+  <div nz-row  >
+    <!-- <div  nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="24"> -->
+
+      <nz-footer>Footer</nz-footer>
+
+
+    <!-- </div> -->
+  </div>
 
   <nz-drawer [nzClosable]="false" [nzHeight] ='200'  [nzVisible]="visible" [nzPlacement]="placement" nzTitle=" Category List" (nzOnClose)="close()">
     
