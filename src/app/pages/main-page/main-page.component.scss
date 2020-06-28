@@ -1,3 +1,41 @@
 .catagory-list{
     width: 90% !important;
 }
+
+nz-divider {
+    color: #333;
+    font-weight: normal;
+  }
+  .inner-box {
+    background: #0092ff;
+    padding: 8px 0;
+  }
+
+  .cat-list{
+      margin-top: -20px !important;
+  }
+
+  .category-tile{
+
+    margin: 2px !important;
+    padding: 2px !important;
+    text-align: center !important;
+    display: inline-block !important;
+    background-color: green($color: #000000);
+
+  }
+
+  nz-divider {
+    color: #333;
+    font-weight: normal;
+  }
+  .inner-box {
+    background: #0092ff;
+    padding: 8px 0;
+
+    margin: 2px !important;
+    padding: 2px !important;
+    text-align: center !important;
+    // display: inline-block !important;
+    margin-right: -10px !important;
+  }

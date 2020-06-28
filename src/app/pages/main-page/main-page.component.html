@@ -6,9 +6,10 @@
         <nz-page-header-title>e-publisher</nz-page-header-title>
         <nz-page-header-subtitle>publish what you want</nz-page-header-subtitle>
         <nz-page-header-extra>
-          <button nz-button (click)="open()" >Categories</button>
-          <button nz-button>Operation</button>
-          <button nz-button nzType="primary">Primary</button>
+          <button nz-button (click)="open()" >Job Categories</button>
+          <button nz-button  >Publication</button>
+          <button nz-button>Login</button>
+          <button nz-button nzType="primary">Sign Up</button>
         </nz-page-header-extra>
         <nz-page-header-content>
           <nz-descriptions nzSize="small" [nzColumn]="3">
@@ -37,8 +38,10 @@
 
   <nz-drawer [nzClosable]="false" [nzHeight] ='200'  [nzVisible]="visible" [nzPlacement]="placement" nzTitle=" Category List" (nzOnClose)="close()">
     
-
     
+    <div nz-row class="cat-list" [nzGutter]="{ xs: 24, sm: 24, md: 24, lg: 30 }">
+      <div nz-col style="cursor: pointer;" (click)='selectCategory(item)' class="gutter-row"*ngFor="let item of categorieyList"  [nzSpan]="6"><div class="inner-box">{{item.categoryName}}</div></div>
+    </div>
 
 
   </nz-drawer>
