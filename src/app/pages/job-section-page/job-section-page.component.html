@@ -1,13 +1,52 @@
+
+    <div nz-row>
+        <div nz-col class="vaconcyHeader" nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="24">
+            <h4>Accounting Related Job Vacancies Apply now</h4>
+        </div>
+    </div>
+
+
+
 <div nz-row [nzGutter]="{ xs: 24, sm: 24, md: 24, lg: 24 }">
+
     <div *ngFor="let item of vacancyList" nz-col class="gutter-row" [nzSpan]="24"><div class="inner-box">
 
-        <nz-card style="width: 100%;margin-top: 2px" [nzLoading]="loading">
-            <nz-card-meta [nzAvatar]="avatarTemplate" nzTitle={{item.JobTile}} nzDescription="This is the description"></nz-card-meta>
-          </nz-card>
+        <nz-card nz-card-grid class="job-description-card" [nzLoading]="loading">
 
-          <ng-template #avatarTemplate>
-            <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
-          </ng-template>
+            <h5 class="job-title">{{item.JobTile}}<span class="comapny-name">({{item.comapny}})</span></h5>
+            <span class="job-description" >{{item.description}}</span>
 
-    </div></div>
+            <div class="job-card-footer">
+               <span class="dates" >Opening Date : {{item.openDate |date :'yyyy-MM-dd'}} /</span>
+               <span class="dates" >End Date : {{item.endDate|date:'yyyy-MM-dd'}}</span><br>
+               <button (click)='showModalMiddle()' nz-button nzType="default" nzDanger>Apply Now</button>
+
+            </div>
+            <div class="job-card-footer2">
+
+
+             </div>
+
+        </nz-card>
+
+
+    </div>
+
+</div>
+
+    
+
   </div>
+
+  <nz-modal class="model-application"
+  nzWrapClassName="vertical-center-modal"
+  [(nzVisible)]="isVisibleMiddle"
+  nzTitle="Vertically centered modal dialog"
+  (nzOnCancel)="handleCancelMiddle()"
+  (nzOnOk)="handleOkMiddle()"
+  [nzStyle]="{ width: '90%' ,height:'1600px !important'}"
+>
+  <p>some contents...</p>
+  <p>some contents...</p>
+  <p>some contents...</p>
+</nz-modal>

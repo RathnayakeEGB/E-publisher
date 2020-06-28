@@ -57,3 +57,19 @@ nz-divider {
   0 100px 80px rgba(0, 0, 0, 0.12);
   
   }
+
+  .button-div{
+    padding: 1px !important;
+    font-size: 10px !important;
+  }
+  .button-class{
+    font-size: 11px !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    .button-class{
+      font-size: 15px !important;
+      color: red;
+    }
+  }
+  

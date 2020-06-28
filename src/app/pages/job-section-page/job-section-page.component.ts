@@ -27,18 +27,18 @@ export class JobSectionPageComponent implements OnInit {
   ]
 
   jobList =[
-    {"JobTile":'Accountent','Description':'sddddddddddddddddddddddddddddddddddddddddddddddd','contactNo':'0171671711','catId':'2','comapny':'ABC pvt'},
-    {"JobTile":'Clarck','Description':'dsfsdfffffffffffffsfsdsssfsf','contactNo':'o74334334343','catId':'2','comapny':'KKC pvt'}
+    {"JobTile":'Accountent','description':' Konnect Net Pvt Ltd Please refer the advert Excellent communication skills in Spanish Language - written and verbal testing 1 testing 1 testing 1 testing 1  ','contactNo':'0171671711','catId':'2','comapny':'ABC pvt','openDate':'2020-12-21','endDate':'2021-01-05'},
+    {"JobTile":'Clarck','description':'dsfsdfffffffffffffsfsdsssfsf','contactNo':'o74334334343','catId':'2','comapny':'KKC pvt','openDate':'2020-12-21','endDate':'2021-01-05'}
 
   ]
 
   loading = true;
-
   vacancyList:any =[];
-
-
+  isVisibleMiddle = false;
+ 
   constructor(public router: ActivatedRoute) {
 
+  
     
     this.router.params.subscribe( params => {
       
@@ -56,6 +56,20 @@ export class JobSectionPageComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+
+  showModalMiddle(): void {
+    this.isVisibleMiddle = true;
+  }
+
+  handleCancelMiddle(): void {
+    this.isVisibleMiddle = false;
+  }
+
+  handleOkMiddle(): void {
+    console.log('click ok');
+    this.isVisibleMiddle = false;
   }
 
 }
