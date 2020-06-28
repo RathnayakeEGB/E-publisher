@@ -14,6 +14,7 @@ import { NzNoAnimationModule } from 'ng-zorro-antd/core/no-animation';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { RegistratinPageComponent } from './pages/registratin-page/registratin-page.component';
+import { JobSectionPageComponent } from './pages/job-section-page/job-section-page.component';
 
 registerLocaleData(en);
 
@@ -21,7 +22,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     MainPageComponent,
-    RegistratinPageComponent
+    RegistratinPageComponent,
+    JobSectionPageComponent
   ],
   imports: [
     BrowserModule,

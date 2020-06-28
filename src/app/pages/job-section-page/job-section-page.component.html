@@ -1,0 +1,13 @@
+<div nz-row [nzGutter]="{ xs: 24, sm: 24, md: 24, lg: 24 }">
+    <div *ngFor="let item of vacancyList" nz-col class="gutter-row" [nzSpan]="24"><div class="inner-box">
+
+        <nz-card style="width: 100%;margin-top: 2px" [nzLoading]="loading">
+            <nz-card-meta [nzAvatar]="avatarTemplate" nzTitle={{item.JobTile}} nzDescription="This is the description"></nz-card-meta>
+          </nz-card>
+
+          <ng-template #avatarTemplate>
+            <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+          </ng-template>
+
+    </div></div>
+  </div>

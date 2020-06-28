@@ -1,8 +1,8 @@
 
-   <div nz-row>
+   <div nz-row  >
 
     <div class="site-page-header-ghost-wrapper">
-      <nz-page-header nzBackIcon [nzGhost]="false">
+      <nz-page-header class="header-design" nzBackIcon [nzGhost]="false">
         <nz-page-header-title>e-publisher</nz-page-header-title>
         <nz-page-header-subtitle>publish what you want</nz-page-header-subtitle>
         <nz-page-header-extra>
@@ -28,8 +28,21 @@
 
 
   </div>
-  <div nz-row>
+  <div  nz-row style="height: 100% !important;">
 
+
+    <div class="home-rout" nz-col nzXs="24" nzSm="24" nzMd="4" nzLg="4" nzXl="4">
+
+
+    </div>
+    <div style="overflow: hidden;" nz-col class="home-rout" nzXs="24" nzSm="24" nzMd="16" nzLg="16" nzXl="16">
+
+      <router-outlet></router-outlet>
+
+    </div>
+    <div nz-col class="home-rout" nzXs="24" nzSm="24" nzMd="4" nzLg="4" nzXl="4">
+
+    </div>
 
 
 
