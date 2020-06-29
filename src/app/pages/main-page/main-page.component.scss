@@ -73,3 +73,30 @@ nz-divider {
     }
   }
   
+  @media only screen and (max-width: 600px) {
+    .option-list{
+      display: none !important;
+    }
+    .option-list2{
+      display: block !important;
+
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .option-list{
+      display: block !important;
+    }
+    .option-list2-div{
+      display: inline !important;
+      right: 0 !important;
+      margin-left: 10px !important;
+    }
+    .option-list2{
+      display: none !important;
+      text-align: right !important;
+      width: 100% !important;
+    
+
+    }
+  }

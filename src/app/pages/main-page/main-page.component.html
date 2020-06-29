@@ -10,14 +10,64 @@
         <nz-page-header class="header-design" nzBackIcon [nzGhost]="true">
           <nz-page-header-title>e-publisher</nz-page-header-title>
           <nz-page-header-subtitle>publish what you want</nz-page-header-subtitle>
-          <nz-page-header-extra>
+          <nz-page-header-extra class="option-list" >
 
             <button nz-button (click)="open()" >Job Categories</button>
-            <button nz-button  >Publication</button>
-            <button nz-button>Login</button>
-            <button nz-button nzType="primary">Sign Up</button>
+            <button nz-button style="margin-left: 2px !important;" >Publication</button>
+            <!-- <button nz-button>Login</button>
+            <button nz-button nzType="primary">Sign Up</button> -->
+
+            <nz-button-group style="margin-left: 2px !important;">
+              <button nz-button >Options</button>
+              <button nz-button nz-dropdown [nzDropdownMenu]="menu2" nzPlacement="bottomRight">
+                <i nz-icon nzType="user"></i>
+              </button>
+            </nz-button-group>
+
+            <nz-dropdown-menu #menu2="nzDropdownMenu">
+              <ul nz-menu>
+                <li nz-menu-item><i nz-icon nzType="user-add" nzTheme="outline"></i>Sign Up</li>
+                <li nz-menu-item><i nz-icon nzType="login" nzTheme="outline"></i>Login</li>
+                <li nz-menu-item><i nz-icon nzType="logout" nzTheme="outline"></i>Logout</li>
+              </ul>
+            </nz-dropdown-menu>
+
 
           </nz-page-header-extra>
+
+          <nz-page-header-extra class="option-list2" style="text-align: right;" >
+
+             <div class="option-list2-div">
+
+              <a nz-dropdown [nzDropdownMenu]="menu">
+                Options
+                <i nz-icon nzType="down"></i>
+              </a>
+  
+              <nz-button-group>
+                <nz-dropdown-menu #menu="nzDropdownMenu">
+                  <ul nz-menu>
+                    <li nz-menu-item  (click)="open()" ><i nz-icon nzType="smile" nzTheme="outline"></i>Job Categories</li>
+                    <li nz-menu-item><i nz-icon nzType="book" nzTheme="outline"></i>Publication</li>
+                    <li nz-menu-item ><i nz-icon nzType="user-add" nzTheme="outline"></i>Sign Up</li>
+                    <li nz-menu-item><i nz-icon nzType="login" nzTheme="outline"></i>Login</li>
+                    <li nz-menu-item ><i nz-icon nzType="logout" nzTheme="outline"></i>Logout</li>
+
+                  </ul>
+                </nz-dropdown-menu>
+  
+              </nz-button-group>
+
+
+            </div>
+
+           
+
+
+          </nz-page-header-extra>
+
+
+
           <nz-page-header-content>
             <!-- <nz-descriptions nzSize="small" [nzColumn]="3">
               <nz-descriptions-item nzTitle="Created" [nzSpan]="1">Lili Qu</nz-descriptions-item>
@@ -54,14 +104,7 @@
 
   </div>
 
-  <div nz-row  >
-    <!-- <div  nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="24"> -->
 
-      <nz-footer>Footer</nz-footer>
-
-
-    <!-- </div> -->
-  </div>
 
   <nz-drawer [nzClosable]="false" [nzHeight] ='200'  [nzVisible]="visible" [nzPlacement]="placement" nzTitle=" Category List" (nzOnClose)="close()">
     
