@@ -15,6 +15,7 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { RegistratinPageComponent } from './pages/registratin-page/registratin-page.component';
 import { JobSectionPageComponent } from './pages/job-section-page/job-section-page.component';
+import { DashBoardPageComponent } from './pages/dash-board-page/dash-board-page.component';
 
 registerLocaleData(en);
 
@@ -23,7 +24,8 @@ registerLocaleData(en);
     AppComponent,
     MainPageComponent,
     RegistratinPageComponent,
-    JobSectionPageComponent
+    JobSectionPageComponent,
+    DashBoardPageComponent
   ],
   imports: [
     BrowserModule,

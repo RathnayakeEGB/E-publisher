@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NzDrawerPlacement } from 'ng-zorro-antd';
-import { Router } from '@angular/router';
+import { Router, Event, NavigationEnd, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
@@ -29,10 +29,27 @@ export class MainPageComponent implements OnInit {
 
   ]
 
+  url :boolean =false;
 
-  constructor(public router: Router) { }
+  constructor(public router2: ActivatedRoute,public router: Router) {
+
+    
+
+   }
 
   ngOnInit(): void {
+
+    this.router2.url.subscribe(vlue=>{
+      console.log("url : ",vlue);
+
+      if(vlue[0].path ==='dash-board'){
+        this.url =false;
+      }else{
+        this.url =true;
+      }
+      
+    })
+
   }
 
   open(): void {
