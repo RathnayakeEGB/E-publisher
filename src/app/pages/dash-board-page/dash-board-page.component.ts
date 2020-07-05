@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashBoardPageComponent implements OnInit {
 
+  productList =[{"id":'1'},{"id":'1'},{"id":'1'},{"id":'1'},{"id":'1'},{"id":'1'},{"id":'1'},{"id":'1'}]
+
   constructor() { }
 
   ngOnInit(): void {

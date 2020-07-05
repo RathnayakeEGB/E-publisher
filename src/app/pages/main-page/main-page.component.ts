@@ -41,8 +41,9 @@ export class MainPageComponent implements OnInit {
 
     this.router2.url.subscribe(vlue=>{
       console.log("url : ",vlue);
+      console.log("url : ",this.router.url);
 
-      if(vlue[0].path ==='dash-board'){
+      if(this.router.url ==='/mainPage/dash-board'){
         this.url =false;
       }else{
         this.url =true;

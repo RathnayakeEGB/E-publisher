@@ -8,14 +8,14 @@
 
       <div class="site-page-header-ghost-wrapper">
         <nz-page-header class="header-design" nzBackIcon [nzGhost]="true">
+
           <nz-page-header-title>e-publisher</nz-page-header-title>
           <nz-page-header-subtitle>publish what you want</nz-page-header-subtitle>
           <nz-page-header-extra class="option-list" >
 
-            <button nz-button (click)="open()" >Job Categories</button>
+            <button nz-button (click)="open()" >Jobs</button>
             <button nz-button style="margin-left: 2px !important;" >Publication</button>
-            <!-- <button nz-button>Login</button>
-            <button nz-button nzType="primary">Sign Up</button> -->
+            
 
             <nz-button-group style="margin-left: 2px !important;">
               <button nz-button >Options</button>
@@ -33,6 +33,19 @@
             </nz-dropdown-menu>
 
 
+            <!-- <div style="width: 100% !important;">
+              <div nz-col nzXs="2" nzSm="4" nzMd="6" nzLg="8" nzXl="10">
+                Col
+              </div>
+              <div nz-col nzXs="20" nzSm="16" nzMd="12" nzLg="8" nzXl="4">
+                Col
+              </div>
+              <div nz-col nzXs="2" nzSm="4" nzMd="6" nzLg="8" nzXl="10">
+                Col
+              </div>
+            </div> -->
+
+
           </nz-page-header-extra>
 
           <nz-page-header-extra class="option-list2" style="text-align: right;" >
@@ -47,7 +60,7 @@
               <nz-button-group>
                 <nz-dropdown-menu #menu="nzDropdownMenu">
                   <ul nz-menu>
-                    <li nz-menu-item  (click)="open()" ><i nz-icon nzType="smile" nzTheme="outline"></i>Job Categories</li>
+                    <li nz-menu-item  (click)="open()" ><i nz-icon nzType="smile" nzTheme="outline"></i>Jobs</li>
                     <li nz-menu-item><i nz-icon nzType="book" nzTheme="outline"></i>Publication</li>
                     <li nz-menu-item ><i nz-icon nzType="user-add" nzTheme="outline"></i>Sign Up</li>
                     <li nz-menu-item><i nz-icon nzType="login" nzTheme="outline"></i>Login</li>
@@ -80,39 +93,41 @@
 
     </div>
 
-
-
-   
-
-
   </div>
 
-  <div *ngIf="!url"  nz-row style="height: 100% !important; overflow: hidden;">
+  <div style="padding: 10px !important; overflow-y: scroll !important;height:90% !important;padding-bottom: 10px !important;" *ngIf="!url" >
   
     <router-outlet></router-outlet>
 
   </div>
 
 
-  <div *ngIf="url"  nz-row style="height: 79% !important; overflow: hidden;">
+  <div *ngIf="url" style="height: 100% !important; overflow: scroll !important;"  nz-row >
 
 
-    <div  *ngIf="url" class="home-rout" nz-col nzXs="24" nzSm="24" nzMd="4" nzLg="4" nzXl="4">
+      <div  class="home-rout" nz-col nzXs="24" nzSm="24" nzMd="4" nzLg="4" nzXl="4">
 
 
-    </div>
-    <div *ngIf="url"  style=" overflow-x: hidden;height: 100% !important; " nz-col class="home-rout" nzXs="24" nzSm="24" nzMd="16" nzLg="16" nzXl="16">
+      </div>
+      <div  style=" overflow-y: scroll !important; overflow-x: hidden;height: 80% !important; " nz-col class="home-rout" nzXs="24" nzSm="24" nzMd="16" nzLg="16" nzXl="16">
 
-      <router-outlet></router-outlet>
+        <router-outlet></router-outlet>
 
-    </div>
-    <div *ngIf="url" nz-col class="home-rout" nzXs="24" nzSm="24" nzMd="4" nzLg="4" nzXl="4">
+      </div>
+      <div  nz-col class="home-rout" nzXs="24" nzSm="24" nzMd="4" nzLg="4" nzXl="4">
 
-    </div>
+      </div>  
 
   </div>
 
+  <div nz-row style="width: 100% !important;" >
+    <!-- <div  nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="24"> -->
 
+      <nz-footer>Footer</nz-footer>
+
+
+    <!-- </div> -->
+  </div>
 
   <nz-drawer [nzClosable]="false" [nzHeight] ='200'  [nzVisible]="visible" [nzPlacement]="placement" nzTitle=" Category List" (nzOnClose)="close()">
     
